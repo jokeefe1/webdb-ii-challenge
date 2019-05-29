@@ -14,7 +14,7 @@ function find() {
 }
 
 function findById(id) {
-    return db('zoos').where({ id });
+    return db('zoos').where({ id: id }).first();
 }
 
 function add(zoo) {
@@ -37,8 +37,8 @@ function removeAll() {
     return db('zoos').delete();
 }
 
-//function execute() {
-//     const findZoos = await find();
+// function execute(id) {
+//     const findZoos = findById(1);
 //     console.log(findZoos);
 // }
 
